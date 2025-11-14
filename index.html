@@ -2,28 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Shinoj Philip John | Data Engineer Portfolio</title>
+  <title>Shinoj Philip John | Data Engineer & ML Enthusiast</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Shinoj Philip John - Data Engineer | Machine Learning Enthusiast | Cloud & Analytics" />
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/1" />
+  <meta
+    name="description"
+    content="Portfolio of Shinoj Philip John — Data Engineer & Machine Learning Enthusiast with experience in AWS, Snowflake, ETL, and predictive analytics."
+  />
+  <link rel="icon" href="Shinoj_Photo.jpg" />
   <style>
     :root {
-      --bg: #050816;
-      --bg-alt: #0b1120;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.1);
-      --accent-strong: #0ea5e9;
-      --text: #e5e7eb;
-      --text-muted: #9ca3af;
-      --card-bg: rgba(15, 23, 42, 0.9);
-      --border-subtle: rgba(148, 163, 184, 0.2);
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --bg: #f5f5f7;
+      --bg-alt: #ffffff;
+      --bg-soft: #f9fafb;
+      --border-subtle: #e5e5ea;
+      --border-strong: #d2d2d7;
+      --text-main: #1d1d1f;
+      --text-muted: #6e6e73;
+      --accent: #0071e3;
+      --accent-soft: #e8f1ff;
+      --accent-strong: #0056b9;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.08);
       --radius-lg: 18px;
-      --radius-full: 999px;
-      --transition-fast: 0.2s ease-out;
-      --transition-med: 0.3s ease-out;
-      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Inter", "Segoe UI", sans-serif;
+      --radius-xl: 22px;
+      --radius-pill: 999px;
+      --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "SF Pro Display", system-ui, "Segoe UI", sans-serif;
     }
 
     * {
@@ -34,15 +37,15 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 80px;
+      scroll-padding-top: 72px;
     }
 
     body {
       font-family: var(--font-sans);
-      background: radial-gradient(circle at top, #1f2937 0, #020617 50%, #000 100%);
-      color: var(--text);
+      background-color: var(--bg);
+      color: var(--text-main);
       line-height: 1.6;
-      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -55,84 +58,78 @@
       display: block;
     }
 
-    /* Layout */
     .container {
-      width: 100%;
-      max-width: 1080px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0 1.25rem;
+      padding: 0 1.5rem;
     }
 
-    /* Navbar */
+    /* NAVBAR */
+
     .navbar {
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(16px);
-      background: linear-gradient(
-        to bottom,
-        rgba(15, 23, 42, 0.96),
-        rgba(15, 23, 42, 0.75),
-        transparent
-      );
-      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+      backdrop-filter: blur(18px);
+      background: rgba(245, 245, 247, 0.88);
+      border-bottom: 1px solid rgba(210, 210, 215, 0.7);
     }
 
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.9rem 0;
+      padding: 0.85rem 0;
     }
 
-    .brand {
+    .nav-brand {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.65rem;
     }
 
-    .brand-badge {
+    .nav-logo-pill {
       width: 32px;
       height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 20% 0%, #38bdf8, #0f172a 55%);
+      border-radius: 12px;
+      background: linear-gradient(135deg, #ffffff, #e5e5ea);
+      border: 1px solid var(--border-subtle);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #f9fafb;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.9rem;
-      box-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
+      color: var(--text-main);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
     }
 
-    .brand-text {
+    .nav-text {
       display: flex;
       flex-direction: column;
       gap: 0.1rem;
     }
 
-    .brand-name {
+    .nav-name {
+      font-size: 0.95rem;
       font-weight: 600;
-      letter-spacing: 0.02em;
-      font-size: 0.98rem;
     }
 
-    .brand-role {
-      font-size: 0.75rem;
+    .nav-role {
+      font-size: 0.78rem;
       color: var(--text-muted);
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
-      font-size: 0.9rem;
+      gap: 1.25rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
     }
 
     .nav-links a {
-      color: var(--text-muted);
       position: relative;
-      padding-bottom: 0.2rem;
+      padding-bottom: 0.1rem;
     }
 
     .nav-links a::after {
@@ -143,175 +140,160 @@
       width: 0%;
       height: 2px;
       border-radius: 999px;
-      background: linear-gradient(to right, #38bdf8, #22c55e);
-      transition: width var(--transition-fast);
+      background: var(--accent);
+      transition: width 0.2s ease-out;
     }
 
     .nav-links a:hover {
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
     .nav-links a:hover::after {
       width: 100%;
     }
 
-    .nav-cta {
-      padding: 0.4rem 0.9rem;
-      border-radius: var(--radius-full);
-      background: radial-gradient(circle at 0 0, #22c55e, #0f172a 55%);
-      border: 1px solid rgba(34, 197, 94, 0.5);
-      font-size: 0.82rem;
-      display: flex;
+    .nav-links .nav-cta {
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      color: var(--text-main);
+      display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      box-shadow: 0 0 18px rgba(34, 197, 94, 0.4);
+      gap: 0.35rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     }
 
-    .nav-cta span {
-      font-size: 1rem;
+    .nav-links .nav-cta span {
+      font-size: 0.7rem;
+      color: #34c759;
     }
 
     .nav-toggle {
       display: none;
       border: none;
       background: transparent;
-      color: var(--text);
       font-size: 1.25rem;
       cursor: pointer;
+      color: var(--text-main);
     }
 
-    /* Hero */
+    /* HERO */
+
+    .section {
+      padding: 3.5rem 0 3rem;
+    }
+
     .hero {
-      padding: 4.5rem 0 2.5rem;
+      padding: 3.5rem 0 2.5rem;
     }
 
     .hero-inner {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
       gap: 2.25rem;
       align-items: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.22rem 0.7rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 0.7rem;
+    .hero-eyebrow {
+      font-size: 0.78rem;
       color: var(--text-muted);
-      margin-bottom: 0.9rem;
-      background: radial-gradient(circle at 0 0, #22c55e0d, transparent 45%);
-    }
-
-    .eyebrow-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
     }
 
     .hero-title {
-      font-size: clamp(2.3rem, 3vw, 2.9rem);
-      line-height: 1.15;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.9rem;
+      font-size: clamp(2.1rem, 3vw, 2.7rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
     }
 
     .hero-title span {
-      background: linear-gradient(to right, #38bdf8, #22c55e);
-      -webkit-background-clip: text;
-      color: transparent;
+      color: var(--accent-strong);
     }
 
     .hero-tagline {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--text-muted);
+      max-width: 540px;
       margin-bottom: 1.1rem;
-      max-width: 520px;
     }
 
-    .hero-highlight {
-      color: #e5e7eb;
-      font-weight: 500;
+    .hero-tagline strong {
+      color: var(--text-main);
+      font-weight: 600;
     }
 
     .hero-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      gap: 0.5rem;
       margin-bottom: 1.4rem;
       font-size: 0.8rem;
+    }
+
+    .hero-pill {
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid var(--border-subtle);
       color: var(--text-muted);
     }
 
-    .hero-meta-pill {
-      padding: 0.25rem 0.75rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: radial-gradient(circle at 0 0, #38bdf80d, transparent 55%);
-    }
-
-    .hero-buttons {
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 1.8rem;
+      gap: 0.7rem;
+      margin-bottom: 1.6rem;
     }
 
     .btn-primary,
-    .btn-ghost {
-      border-radius: var(--radius-full);
-      padding: 0.6rem 1.3rem;
-      font-size: 0.86rem;
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 0.65rem 1.3rem;
+      font-size: 0.88rem;
       border: 1px solid transparent;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
       cursor: pointer;
-      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
-        background var(--transition-fast), border-color var(--transition-fast),
-        color var(--transition-fast);
+      transition: background 0.2s ease-out, box-shadow 0.2s ease-out,
+        transform 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
     }
 
     .btn-primary {
-      background: radial-gradient(circle at 0 0, #38bdf8, #0f172a 55%);
-      border-color: rgba(56, 189, 248, 0.7);
-      box-shadow: 0 16px 40px rgba(56, 189, 248, 0.3);
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: 0 14px 28px rgba(0, 112, 227, 0.3);
     }
 
     .btn-primary:hover {
+      background: var(--accent-strong);
       transform: translateY(-1px);
-      box-shadow: 0 20px 55px rgba(56, 189, 248, 0.35);
-      background: radial-gradient(circle at 0 0, #0ea5e9, #020617 55%);
+      box-shadow: 0 20px 40px rgba(0, 86, 185, 0.35);
     }
 
-    .btn-ghost {
-      background: rgba(15, 23, 42, 0.9);
-      border-color: rgba(148, 163, 184, 0.5);
-      color: var(--text);
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text-main);
+      border-color: var(--border-subtle);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
     }
 
-    .btn-ghost:hover {
-      background: rgba(15, 23, 42, 1);
-      border-color: rgba(148, 163, 184, 0.8);
+    .btn-secondary:hover {
+      border-color: var(--border-strong);
       transform: translateY(-1px);
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.8);
-    }
-
-    .btn-primary span,
-    .btn-ghost span {
-      font-size: 1rem;
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.06);
     }
 
     .hero-links {
       display: flex;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 1.2rem;
-      font-size: 0.82rem;
+      gap: 1.1rem;
+      font-size: 0.84rem;
       color: var(--text-muted);
     }
 
@@ -321,180 +303,133 @@
       gap: 0.35rem;
     }
 
+    .hero-links a span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #34c759;
+    }
+
     .hero-links a:hover {
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
-    .link-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #38bdf8;
+    /* PHOTO CARD */
+
+    .hero-photo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Hero right / card */
-    .hero-card {
-      border-radius: 24px;
-      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.2), transparent 45%),
-        radial-gradient(circle at 100% 0, rgba(34, 197, 94, 0.2), transparent 45%),
-        linear-gradient(to bottom right, #020617, #020617);
-      padding: 1.3rem;
-      border: 1px solid rgba(148, 163, 184, 0.2);
+    .hero-photo-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
       box-shadow: var(--shadow-soft);
+      padding: 0.9rem;
       position: relative;
-      overflow: hidden;
-      min-height: 260px;
+      max-width: 320px;
+      width: 100%;
     }
 
-    .hero-card-inner {
+    .hero-photo-inner {
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+    }
+
+    .hero-photo-inner img {
+      width: 100%;
+      height: auto;
+      display: block;
       border-radius: 18px;
-      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.8), #020617);
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      padding: 1.1rem 1.1rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      position: relative;
-      overflow: hidden;
+      object-fit: cover;
     }
 
-    .hero-card-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .hero-card-title {
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .hero-card-tag {
-      font-size: 0.7rem;
-      padding: 0.18rem 0.6rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(56, 189, 248, 0.5);
-      background: rgba(15, 23, 42, 0.9);
-      color: #bae6fd;
-    }
-
-    .hero-card-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.7rem;
-      margin: 0.5rem 0 0.2rem;
-      font-size: 0.75rem;
-    }
-
-    .hero-metric {
-      padding: 0.6rem 0.7rem;
-      border-radius: 12px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.9), #020617);
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .hero-metric-label {
-      color: var(--text-muted);
-      font-size: 0.7rem;
-    }
-
-    .hero-metric-value {
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-
-    .hero-metric-badge {
-      font-size: 0.7rem;
-      padding: 0.16rem 0.5rem;
-      border-radius: var(--radius-full);
-      background: rgba(34, 197, 94, 0.2);
-      color: #bbf7d0;
-      align-self: flex-start;
-      border: 1px solid rgba(34, 197, 94, 0.35);
-    }
-
-    .hero-card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 0.6rem;
-      font-size: 0.72rem;
-      color: var(--text-muted);
-    }
-
-    .hero-card-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .status-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.8);
-    }
-
-    .hero-card-footer span {
-      font-size: 0.7rem;
-    }
-
-    .hero-card-glow {
+    .hero-photo-glow {
       position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.16), transparent 55%);
+      inset: -12px;
+      background: radial-gradient(
+        circle at top,
+        rgba(0, 113, 227, 0.2),
+        transparent 60%
+      );
       pointer-events: none;
       mix-blend-mode: screen;
     }
 
-    /* Sections */
-    section {
-      padding: 2.75rem 0 2.5rem;
+    .hero-photo-meta {
+      margin-top: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.76rem;
+      color: var(--text-muted);
     }
 
+    .hero-photo-meta strong {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .hero-photo-tag {
+      padding: 0.22rem 0.7rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      border: 1px solid #c4d9ff;
+      font-size: 0.75rem;
+    }
+
+    /* SECTION HEADER */
+
     .section-header {
-      margin-bottom: 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       gap: 1rem;
+      margin-bottom: 1.7rem;
+    }
+
+    .section-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
     }
 
     .section-title {
       font-size: 1.35rem;
-      letter-spacing: 0.03em;
+      letter-spacing: -0.01em;
     }
 
     .section-subtitle {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
-      max-width: 420px;
+      max-width: 520px;
     }
 
-    .badge {
-      font-size: 0.72rem;
-      padding: 0.18rem 0.6rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(148, 163, 184, 0.6);
+    .section-tag {
+      font-size: 0.78rem;
       color: var(--text-muted);
+      padding: 0.28rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
     }
 
-    /* About */
+    /* ABOUT */
+
     .about-grid {
       display: grid;
       grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
-      gap: 1.6rem;
+      gap: 1.7rem;
       align-items: flex-start;
     }
 
     .about-text {
-      font-size: 0.9rem;
+      font-size: 0.94rem;
       color: var(--text-muted);
     }
 
@@ -502,7 +437,7 @@
       margin-top: 0.8rem;
     }
 
-    .about-pill-row {
+    .about-highlight-row {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -510,28 +445,28 @@
     }
 
     .about-pill {
-      font-size: 0.78rem;
-      padding: 0.25rem 0.65rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: #e5e7eb;
-      background: rgba(15, 23, 42, 0.9);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      font-size: 0.8rem;
+      color: var(--text-main);
     }
 
     .about-card {
+      background: var(--bg-alt);
       border-radius: var(--radius-lg);
-      background: var(--card-bg);
       border: 1px solid var(--border-subtle);
-      padding: 0.9rem 1rem;
+      padding: 1rem 1.1rem;
       box-shadow: var(--shadow-soft);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
     }
 
     .about-card h3 {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       margin-bottom: 0.5rem;
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
     .about-card ul {
@@ -540,81 +475,169 @@
     }
 
     .about-card li {
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.4rem;
       display: flex;
-      align-items: baseline;
       gap: 0.35rem;
+      align-items: flex-start;
     }
 
     .about-card li::before {
       content: "•";
       color: var(--accent);
       font-size: 0.9rem;
+      line-height: 1.2;
     }
 
-    /* Projects */
+    /* EXPERIENCE */
+
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .experience-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.7rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-main {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .company-logo-pill {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #ffffff, #f1f1f3);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .experience-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .experience-role {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .experience-company {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .experience-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .experience-body ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.35rem;
+    }
+
+    .experience-body li {
+      display: flex;
+      gap: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .experience-body li::before {
+      content: "–";
+      color: var(--text-muted);
+    }
+
+    /* PROJECTS */
+
     .projects-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.3fr);
-      gap: 1.4rem;
-      align-items: stretch;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.4fr);
+      gap: 1.5rem;
+      align-items: flex-start;
     }
 
     .project-card {
+      background: var(--bg-alt);
       border-radius: var(--radius-lg);
-      background: var(--card-bg);
       border: 1px solid var(--border-subtle);
-      padding: 1rem 1rem 0.9rem;
+      padding: 1rem 1.1rem;
       box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .project-card + .project-card {
+      margin-top: 0.9rem;
     }
 
     .project-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 0.8rem;
+      gap: 0.7rem;
+      margin-bottom: 0.4rem;
     }
 
     .project-title {
-      font-size: 1rem;
-      font-weight: 500;
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: var(--text-main);
     }
 
     .project-tag {
-      font-size: 0.72rem;
-      padding: 0.16rem 0.6rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(234, 179, 8, 0.6);
-      background: rgba(24, 24, 27, 0.95);
-      color: #fef9c3;
-    }
-
-    .project-body {
-      font-size: 0.83rem;
+      font-size: 0.76rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #f5f5f7;
       color: var(--text-muted);
     }
 
     .project-body p + p {
-      margin-top: 0.55rem;
+      margin-top: 0.4rem;
     }
 
-    .project-meta-row {
+    .project-tech-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      margin: 0.5rem 0;
+      gap: 0.35rem;
+      margin: 0.6rem 0;
     }
 
-    .project-pill {
-      font-size: 0.75rem;
+    .project-tech {
       padding: 0.2rem 0.6rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: #e5e7eb;
-      background: rgba(15, 23, 42, 0.9);
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      font-size: 0.76rem;
+      color: var(--text-muted);
     }
 
     .project-footer {
@@ -622,12 +645,10 @@
       justify-content: space-between;
       align-items: center;
       margin-top: 0.4rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
+      font-size: 0.8rem;
     }
 
     .project-footer a {
-      font-size: 0.78rem;
       color: var(--accent-strong);
       display: inline-flex;
       align-items: center;
@@ -639,38 +660,41 @@
     }
 
     .project-side-card {
+      background: var(--bg-alt);
       border-radius: var(--radius-lg);
-      background: radial-gradient(circle at 0 0, rgba(56, 189, 248, 0.2), transparent 55%),
-        var(--card-bg);
       border: 1px solid var(--border-subtle);
-      padding: 0.9rem 1rem;
-      font-size: 0.78rem;
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.85rem;
       color: var(--text-muted);
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
     }
 
     .project-side-card h3 {
-      font-size: 0.9rem;
-      color: #e5e7eb;
-      margin-bottom: 0.1rem;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
     }
 
-    .project-timeline {
+    .project-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.4rem;
+    }
+
+    .project-list li {
+      margin-bottom: 0.4rem;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.35rem;
     }
 
-    .timeline-item {
-      padding: 0.18rem 0.6rem;
-      border-radius: var(--radius-full);
-      border: 1px dashed rgba(148, 163, 184, 0.6);
-      font-size: 0.74rem;
+    .project-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-size: 0.9rem;
     }
 
-    /* Skills */
+    /* SKILLS */
+
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -678,53 +702,162 @@
     }
 
     .skills-card {
+      background: var(--bg-alt);
       border-radius: var(--radius-lg);
-      background: var(--card-bg);
       border: 1px solid var(--border-subtle);
-      padding: 0.9rem 0.9rem 0.8rem;
+      padding: 0.9rem 1rem;
       box-shadow: var(--shadow-soft);
-      font-size: 0.8rem;
+      font-size: 0.84rem;
       color: var(--text-muted);
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
     }
 
     .skills-card h3 {
-      font-size: 0.9rem;
-      color: #e5e7eb;
+      font-size: 0.94rem;
+      margin-bottom: 0.4rem;
+      color: var(--text-main);
     }
 
     .skills-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
+      gap: 0.35rem;
+      margin-top: 0.3rem;
     }
 
     .skills-tag {
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
       font-size: 0.78rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
     }
 
-    /* Contact */
-    .contact-card {
+    /* HACKERRANK */
+
+    .hr-card {
+      background: var(--bg-alt);
       border-radius: var(--radius-lg);
-      background: var(--card-bg);
       border: 1px solid var(--border-subtle);
-      padding: 1rem 1rem 0.9rem;
+      padding: 1rem 1.1rem;
       box-shadow: var(--shadow-soft);
-      font-size: 0.85rem;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .hr-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .hr-badge {
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      background: #0e141b;
+      color: #00ea64;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hr-badge span.icon {
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      background: #00ea64;
+    }
+
+    .hr-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .btn-outline {
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      cursor: pointer;
+      transition: background 0.2s ease-out, box-shadow 0.2s ease-out,
+        transform 0.2s ease-out, border-color 0.2s ease-out;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent-strong);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+      transform: translateY(-1px);
+    }
+
+    /* RESUME VIEWER */
+
+    .resume-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.1rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.86rem;
+      color: var(--text-muted);
+    }
+
+    .resume-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .resume-frame-wrapper {
+      margin-top: 0.5rem;
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      background: #f5f5f7;
+    }
+
+    .resume-frame {
+      width: 100%;
+      height: 520px;
+      border: none;
+    }
+
+    .resume-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.35rem;
+    }
+
+    /* CONTACT */
+
+    .contact-card {
+      background: var(--bg-alt);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1rem 1.1rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.86rem;
       color: var(--text-muted);
     }
 
     .contact-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-top: 0.9rem;
+      gap: 1.4rem;
+      margin-top: 0.75rem;
     }
 
     .contact-item {
@@ -734,14 +867,14 @@
     }
 
     .contact-label {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
     .contact-link {
-      font-size: 0.86rem;
-      color: #e5e7eb;
-      word-break: break-all;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      word-break: break-word;
     }
 
     .contact-link:hover {
@@ -749,69 +882,74 @@
       text-decoration: underline;
     }
 
-    /* Footer */
+    /* FOOTER */
+
     .footer {
-      padding: 1.5rem 0 1.25rem;
-      border-top: 1px solid rgba(148, 163, 184, 0.3);
-      margin-top: 1rem;
-      font-size: 0.76rem;
+      border-top: 1px solid var(--border-subtle);
+      padding: 1.5rem 0 1.3rem;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
 
     .footer-inner {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
-      gap: 0.8rem;
       align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
     }
 
     .footer-links {
       display: flex;
-      flex-wrap: wrap;
       gap: 0.9rem;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
+      flex-wrap: wrap;
     }
 
     .footer-links a:hover {
-      color: #e5e7eb;
+      color: var(--text-main);
     }
 
-    /* Responsive */
-    @media (max-width: 900px) {
+    /* RESPONSIVE */
+
+    @media (max-width: 960px) {
       .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1.1fr);
       }
 
-      .hero-card {
+      .hero-photo-wrapper {
         order: -1;
-      }
-
-      .projects-grid {
-        grid-template-columns: minmax(0, 1fr);
       }
 
       .about-grid {
         grid-template-columns: minmax(0, 1fr);
       }
+
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 720px) {
       .nav-links {
-        display: none;
         position: absolute;
-        right: 1.25rem;
+        right: 1.5rem;
         top: 3.3rem;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid var(--border-subtle);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        padding: 0.8rem 0.9rem;
         flex-direction: column;
-        gap: 0.75rem;
-        padding: 0.7rem 0.9rem;
-        border-radius: 12px;
-        background: rgba(15, 23, 42, 0.98);
-        border: 1px solid rgba(148, 163, 184, 0.4);
-        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+        align-items: flex-start;
+        gap: 0.6rem;
+        display: none;
       }
 
       .nav-links.show {
@@ -823,35 +961,35 @@
       }
 
       .hero {
-        padding-top: 3.3rem;
+        padding-top: 3rem;
       }
 
-      section {
-        padding: 2.4rem 0 2.1rem;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 480px) {
-      .skills-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .hero-buttons a {
-        justify-content: center;
+      .section {
+        padding: 3rem 0 2.6rem;
       }
 
       .section-header {
         flex-direction: column;
         align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .skills-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions a {
+        justify-content: center;
+      }
+
+      .resume-frame {
+        height: 420px;
       }
     }
   </style>
@@ -860,21 +998,24 @@
   <!-- NAVBAR -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a href="#top" class="brand">
-        <div class="brand-badge">SP</div>
-        <div class="brand-text">
-          <div class="brand-name">Shinoj Philip John</div>
-          <div class="brand-role">Data Engineer · ML · Cloud</div>
+      <a href="#top" class="nav-brand">
+        <div class="nav-logo-pill">SP</div>
+        <div class="nav-text">
+          <div class="nav-name">Shinoj Philip John</div>
+          <div class="nav-role">Data Engineer · ML · Cloud Analytics</div>
         </div>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+        <a href="#hackerrank">HackerRank</a>
+        <a href="#resume">Resume</a>
         <a href="#contact" class="nav-cta">
-          <span>●</span> Available for Opportunities
+          <span>●</span>
+          <span>Open to Opportunities</span>
         </a>
       </nav>
     </div>
@@ -885,296 +1026,534 @@
     <section class="hero">
       <div class="container hero-inner">
         <div>
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            <span>Data Engineering · Machine Learning · Cloud Analytics</span>
-          </div>
+          <div class="hero-eyebrow">Data Engineering · Machine Learning · Cloud Analytics</div>
           <h1 class="hero-title">
             Hi, I'm <span>Shinoj Philip John</span><br />
-            Data Engineer & ML Enthusiast.
+            I build data & machine learning solutions.
           </h1>
           <p class="hero-tagline">
-            I design and build data solutions that turn raw information into
-            <span class="hero-highlight">meaningful insights and intelligent products</span> —
-            using Python, SQL, Snowflake, AWS and modern analytics tooling.
+            Data Engineer & Machine Learning Enthusiast with experience designing
+            <strong>cloud-based data pipelines</strong>, building
+            <strong>predictive models</strong>, and turning raw data into
+            <strong>actionable insights</strong> for decision-makers.
           </p>
 
           <div class="hero-meta">
-            <div class="hero-meta-pill">Data Engineer | Machine Learning Enthusiast | Cloud & Analytics</div>
-            <div class="hero-meta-pill">Focused on production-ready, end-to-end solutions</div>
+            <span class="hero-pill">Data Engineer | Machine Learning Enthusiast | Cloud & Analytics</span>
+            <span class="hero-pill">AWS · Snowflake · Python · SQL · ETL/ELT</span>
           </div>
 
-          <div class="hero-buttons">
-            <a href="#projects" class="btn-primary">
-              <span>⚙</span>
-              <span>View Featured Project</span>
-            </a>
-            <a href="#contact" class="btn-ghost">
-              <span>✉</span>
-              <span>Contact Me</span>
-            </a>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#resume" class="btn-secondary">View Resume</a>
           </div>
 
           <div class="hero-links">
             <a href="mailto:shinoj4005@gmail.com">
-              <span class="link-dot"></span>
+              <span class="dot"></span>
               <span>Email: shinoj4005@gmail.com</span>
             </a>
-            <a href="https://linkedin.com/in/shinoj-philip-john" target="_blank">
-              <span>LinkedIn</span>
+            <a href="https://linkedin.com/in/shinoj-philip-john" target="_blank" rel="noreferrer">
+              LinkedIn
             </a>
-            <a href="https://github.com/shinojphilipjohn" target="_blank">
-              <span>GitHub</span>
+            <a href="https://github.com/shinojphilipjohn" target="_blank" rel="noreferrer">
+              GitHub
             </a>
           </div>
         </div>
 
-        <aside class="hero-card">
-          <div class="hero-card-inner">
-            <div class="hero-card-header">
+        <aside class="hero-photo-wrapper">
+          <div class="hero-photo-card">
+            <div class="hero-photo-inner">
+              <img src="Shinoj_Photo.jpg" alt="Portrait of Shinoj Philip John" />
+              <div class="hero-photo-glow"></div>
+            </div>
+            <div class="hero-photo-meta">
               <div>
-                <div class="hero-card-title">Customer Churn Prediction</div>
-                <div style="font-size: 0.76rem; color: var(--text-muted);">
-                  End-to-end ML project focused on Telco customer churn.
-                </div>
+                <strong>Melbourne, Australia</strong><br />
+                Data Engineering · ML · Cloud
               </div>
-              <div class="hero-card-tag">In Progress</div>
-            </div>
-
-            <div class="hero-card-meta">
-              <div class="hero-metric">
-                <div class="hero-metric-label">Stack</div>
-                <div class="hero-metric-value">Python, Pandas, Scikit-learn</div>
-                <div class="hero-metric-badge">EDA → Features → Model</div>
-              </div>
-              <div class="hero-metric">
-                <div class="hero-metric-label">Focus</div>
-                <div class="hero-metric-value">Customer Retention Strategy</div>
-                <div style="font-size: 0.7rem; color: #bae6fd;">
-                  Translating ML into business impact.
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-card-footer">
-              <div class="hero-card-status">
-                <span class="status-dot"></span>
-                <span>Currently building & refining pipeline</span>
-              </div>
-              <span>Deployed version and repo links coming soon</span>
+              <div class="hero-photo-tag">Actively Building</div>
             </div>
           </div>
-          <div class="hero-card-glow"></div>
         </aside>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="section">
       <div class="container">
         <div class="section-header">
-          <div>
+          <div class="section-title-block">
             <h2 class="section-title">About</h2>
             <p class="section-subtitle">
-              Data engineer & machine learning enthusiast with a strong foundation in
-              cloud analytics, statistical modelling and building reliable data
-              pipelines that support real-world decision making.
+              I enjoy working at the intersection of
+              <strong>data engineering, machine learning and analytics</strong> —
+              building pipelines, models and stories that help teams make better
+              decisions.
             </p>
           </div>
-          <div class="badge">Actively learning · Always shipping</div>
+          <div class="section-tag">Master of Analytics · RMIT University</div>
         </div>
 
         <div class="about-grid">
           <div class="about-text">
             <p>
-              I enjoy working across the full data lifecycle — from extracting and
-              modelling data to training machine learning models and presenting the
-              results in a way that makes sense to business stakeholders.
+              My background spans <strong>cloud-native data pipelines</strong> on AWS
+              and Snowflake, <strong>predictive modelling</strong> using Python and
+              scikit-learn, and <strong>analytics storytelling</strong> with tools like
+              Power BI and Tableau. I’ve supported financial and reporting teams with
+              reliable data, while also experimenting with churn prediction and other
+              ML use cases.
             </p>
             <p>
-              My current focus is on customer analytics and churn prediction, where I
-              combine <span class="hero-highlight">Python, SQL, cloud platforms and ML</span>
-              to build pipelines that are robust, explainable and ready for
-              production.
+              I like to work end-to-end: understanding the business problem, shaping
+              the data model, designing the ETL/ELT flow, training and evaluating
+              models, and then communicating the results clearly to stakeholders.
             </p>
 
-            <div class="about-pill-row">
-              <span class="about-pill">Data Pipelines · Cloud Analytics</span>
-              <span class="about-pill">ML for Business Outcomes</span>
-              <span class="about-pill">Experimentation & Continuous Learning</span>
+            <div class="about-highlight-row">
+              <span class="about-pill">Cloud Data Pipelines (AWS · Snowflake)</span>
+              <span class="about-pill">Supervised ML & Predictive Analytics</span>
+              <span class="about-pill">Experiment Design & Model Evaluation</span>
+              <span class="about-pill">Communication to Non-technical Stakeholders</span>
             </div>
           </div>
 
           <aside class="about-card">
-            <h3>What I’m focusing on right now</h3>
+            <h3>Currently focused on</h3>
             <ul>
-              <li>Building an end-to-end <strong>Customer Churn Prediction</strong> project.</li>
-              <li>Strengthening <strong>cloud-native</strong> analytics skills (Snowflake, AWS, Databricks).</li>
-              <li>Deepening knowledge of <strong>feature engineering</strong> & ML model evaluation.</li>
-              <li>Creating a clean, recruiter-friendly GitHub portfolio with real projects.</li>
+              <li>Building an end-to-end <strong>Customer Churn Prediction</strong> project in Python.</li>
+              <li>Strengthening <strong>ETL/ELT & Data Engineering</strong> patterns using AWS & Snowflake.</li>
+              <li>Improving <strong>feature engineering & model tuning</strong> to lift predictive performance.</li>
+              <li>Curating a clean, recruiter-friendly <strong>GitHub portfolio</strong> of real projects.</li>
             </ul>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
       <div class="container">
         <div class="section-header">
-          <div>
-            <h2 class="section-title">Featured Project</h2>
+          <div class="section-title-block">
+            <h2 class="section-title">Work Experience</h2>
             <p class="section-subtitle">
-              A growing set of projects showcasing my skills in data engineering,
-              machine learning and analytics. More projects will be added here soon.
+              Experience spanning data engineering in large-scale environments and
+              analytics-focused work in a research and insights setting.
             </p>
           </div>
-          <div class="badge">More projects coming soon</div>
+          <div class="section-tag">Data Engineering · Analytics · Cloud</div>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-header">
-              <div>
-                <h3 class="project-title">Customer Churn Prediction</h3>
-                <div style="font-size: 0.8rem; color: var(--text-muted);">
-                  Using historical customer behaviour to predict churn and support
-                  proactive retention strategies.
+        <div class="experience-list">
+          <!-- IBISWorld -->
+          <article class="experience-card">
+            <div class="experience-header">
+              <div class="experience-main">
+                <div class="company-logo-pill">IB</div>
+                <div class="experience-title">
+                  <div class="experience-role">Data Team Intern</div>
+                  <div class="experience-company">IBISWorld</div>
                 </div>
               </div>
-              <span class="project-tag">In Progress</span>
-            </div>
-
-            <div class="project-body">
-              <p>
-                This project focuses on understanding why customers leave and how we
-                can predict churn ahead of time. The workflow follows a clear,
-                production-friendly pattern: <strong>EDA → feature engineering →
-                model training → evaluation</strong>.
-              </p>
-              <p>
-                I explore relationships between tenure, contract type, payment
-                methods and service usage to uncover the key drivers of churn, and
-                then train ML models to estimate churn risk at the customer level.
-              </p>
-            </div>
-
-            <div class="project-meta-row">
-              <span class="project-pill">Python</span>
-              <span class="project-pill">Pandas</span>
-              <span class="project-pill">Scikit-learn</span>
-              <span class="project-pill">Statistics</span>
-              <span class="project-pill">Classification Models</span>
-            </div>
-
-            <div class="project-footer">
-              <div>Notebook structure: EDA · Features · Model · Evaluation</div>
-              <div>
-                <!-- Update this link when you push the repo -->
-                <a href="https://github.com/shinojphilipjohn/Profile-Projects" target="_blank">
-                  View code on GitHub →
-                </a>
+              <div class="experience-meta">
+                <div>2025</div>
+                <div>Melbourne, VIC</div>
               </div>
+            </div>
+            <div class="experience-body">
+              <ul>
+                <li>
+                  Delivered Snowflake ELT workflows using AWS S3 external tables,
+                  improving ingestion efficiency and reducing unnecessary storage
+                  duplication by ~20–25% across recurring loads.
+                </li>
+                <li>
+                  Parsed and flattened complex multi-level JSON using
+                  <strong>LATERAL FLATTEN</strong>, increasing usable analytical
+                  fields by ~35% and cutting manual preprocessing time by ~30%
+                  through a structured multi-layer data flow (staging → parsing →
+                  transformation).
+                </li>
+                <li>
+                  Enhanced pipeline traceability with structured logging and clear
+                  transformation checkpoints, reducing debugging time by ~25% and
+                  supporting faster onboarding via high-level architecture
+                  documentation.
+                </li>
+              </ul>
             </div>
           </article>
 
-          <aside class="project-side-card">
-            <h3>What this project demonstrates</h3>
-            <p>
-              The churn prediction project is designed to show how I think about data
-              problems end-to-end:
-            </p>
-            <div class="project-timeline">
-              <span class="timeline-item">Understanding the business problem</span>
-              <span class="timeline-item">Exploratory data analysis</span>
-              <span class="timeline-item">Feature engineering & selection</span>
-              <span class="timeline-item">Model training & tuning</span>
-              <span class="timeline-item">Evaluation using relevant metrics</span>
+          <!-- nbn Australia via Infosys -->
+          <article class="experience-card">
+            <div class="experience-header">
+              <div class="experience-main">
+                <div class="company-logo-pill">nbn</div>
+                <div class="experience-title">
+                  <div class="experience-role">Data Engineer</div>
+                  <div class="experience-company">nbn Australia (via Infosys)</div>
+                </div>
+              </div>
+              <div class="experience-meta">
+                <div>2021–2023</div>
+                <div>India · Remote with AU teams</div>
+              </div>
             </div>
-            <p>
-              I’ll extend this with clearer model comparison, explainability (e.g.
-              feature importance) and potentially a lightweight deployment or
-              dashboard.
+            <div class="experience-body">
+              <ul>
+                <li>
+                  Built and maintained <strong>AWS S3 → EMR → Redshift</strong> ETL
+                  pipelines supporting financial and reporting teams, achieving ~99%
+                  successful daily run stability across batch workloads.
+                </li>
+                <li>
+                  Optimised SQL transformations and Redshift table structures
+                  (sort/distribution keys), improving end-to-end pipeline runtime by
+                  ~25–30% on recurring data loads.
+                </li>
+                <li>
+                  Developed and managed 50+ SQL scripts including delta-load logic,
+                  DDLs, and control-table updates in MySQL, ensuring alignment with
+                  E-R designs and JIRA user stories.
+                </li>
+                <li>
+                  Reduced manual intervention during executions by ~40% through
+                  parameterising ETL behaviour with YAML/JSON configs and automating
+                  jobstreams in IBM Workload Scheduler.
+                </li>
+                <li>
+                  Enhanced data quality and reduced SIT→UAT defect leakage by ~30%
+                  by validating missing data, identifying upstream design gaps, and
+                  coordinating fixes with analysts and operations teams.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-block">
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">
+              Selected projects that demonstrate how I approach data problems from
+              exploration and modelling through to pipeline design and automation.
             </p>
+          </div>
+          <div class="section-tag">Hands-on · End-to-end</div>
+        </div>
+
+        <div class="projects-grid">
+          <div>
+            <!-- Customer Churn Prediction -->
+            <article class="project-card">
+              <div class="project-header">
+                <div>
+                  <h3 class="project-title">Customer Churn Prediction</h3>
+                  <div class="project-tag">Python · Scikit-learn · Classification</div>
+                </div>
+                <div class="project-meta">
+                  <span style="font-size:0.76rem;color:var(--text-muted);">In progress</span>
+                </div>
+              </div>
+              <div class="project-body">
+                <p>
+                  Built an end-to-end churn modelling workflow to help
+                  subscription-style businesses understand and predict which
+                  customers are likely to leave, using a Telco-style dataset.
+                </p>
+                <p>
+                  Cleaned and preprocessed 7,000+ customer records, handling missing
+                  values, encoding categorical fields and scaling numerical features.
+                  Performed EDA to uncover relationships between tenure, contract
+                  types, billing patterns and churn behaviour.
+                </p>
+                <p>
+                  Improved model performance from a baseline of ~70% to ~82% by
+                  applying feature engineering, hyperparameter tuning and
+                  cross-validation, with a focus on business-relevant metrics.
+                </p>
+              </div>
+              <div class="project-tech-row">
+                <span class="project-tech">Python</span>
+                <span class="project-tech">Pandas</span>
+                <span class="project-tech">Scikit-learn</span>
+                <span class="project-tech">EDA</span>
+                <span class="project-tech">Model Evaluation</span>
+                <span class="project-tech">Predictive Analytics</span>
+              </div>
+              <div class="project-footer">
+                <div>Problem → EDA → Features → Model → Evaluation</div>
+                <a href="https://github.com/shinojphilipjohn/Churn-Prediction" target="_blank" rel="noreferrer">
+                  View on GitHub →
+                </a>
+              </div>
+            </article>
+
+            <!-- Payroll ETL Framework -->
+            <article class="project-card">
+              <div class="project-header">
+                <div>
+                  <h3 class="project-title">End-to-End Payroll ETL Framework</h3>
+                  <div class="project-tag">Python · Pandas · MySQL · CLI</div>
+                </div>
+              </div>
+              <div class="project-body">
+                <p>
+                  Designed a command-line–driven ETL engine to automate payroll data
+                  workflows, integrating CSV and SQL sources into a single,
+                  reproducible pipeline.
+                </p>
+                <p>
+                  Implemented a structured flow covering extract → DDL creation →
+                  transform → load, significantly reducing manual preparation time
+                  from hours to minutes and supporting repeatable, auditable runs.
+                </p>
+              </div>
+              <div class="project-tech-row">
+                <span class="project-tech">Python</span>
+                <span class="project-tech">Pandas</span>
+                <span class="project-tech">MySQL</span>
+                <span class="project-tech">ETL Automation</span>
+                <span class="project-tech">Command-line Tools</span>
+              </div>
+              <div class="project-footer">
+                <div>Reproducible ETL · Configurable · Scripted</div>
+                <a href="https://github.com/shinojphilipjohn/ETL-Processor" target="_blank" rel="noreferrer">
+                  View on GitHub →
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <aside class="project-side-card">
+            <h3>How I approach projects</h3>
+            <p>
+              Whether it’s churn prediction or payroll automation, I try to keep a
+              consistent structure across projects so they’re easy to understand,
+              extend and review:
+            </p>
+            <ul class="project-list">
+              <li>Start from a clear business question and success metric.</li>
+              <li>
+                Perform targeted EDA to shape the data model and feature set, not
+                just generate charts.
+              </li>
+              <li>Use clean, modular notebooks or scripts with clear stages.</li>
+              <li>
+                Focus on evaluation that reflects business impact, not just a single
+                score.
+              </li>
+              <li>
+                Document assumptions, limitations and next steps for future
+                iterations or deployment.
+              </li>
+            </ul>
           </aside>
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills">
+    <section id="skills" class="section">
       <div class="container">
         <div class="section-header">
-          <div>
+          <div class="section-title-block">
             <h2 class="section-title">Skills</h2>
             <p class="section-subtitle">
-              A combination of engineering, analytical and machine learning skills,
-              with a strong emphasis on practical implementation and clarity of
-              results.
+              A blend of <strong>data science & ML</strong>, <strong>cloud & data engineering</strong>,
+              and <strong>visualisation & communication</strong> skills, grounded in
+              practical use cases.
             </p>
           </div>
-          <div class="badge">Always evolving</div>
+          <div class="section-tag">Based on recent work & study</div>
         </div>
 
         <div class="skills-grid">
           <div class="skills-card">
-            <h3>Data Engineering & Cloud</h3>
+            <h3>Data Science & ML</h3>
+            <p>Supervised ML and applied predictive modelling.</p>
+            <div class="skills-tags">
+              <span class="skills-tag">Logistic Regression</span>
+              <span class="skills-tag">Random Forest</span>
+              <span class="skills-tag">EDA</span>
+              <span class="skills-tag">Feature Engineering</span>
+              <span class="skills-tag">Model Evaluation</span>
+              <span class="skills-tag">Predictive Analytics</span>
+              <span class="skills-tag">Statistical Modelling</span>
+              <span class="skills-tag">Experiment Design</span>
+            </div>
+          </div>
+
+          <div class="skills-card">
+            <h3>Programming & Tools</h3>
+            <p>Core stack for analytics and ML workflows.</p>
             <div class="skills-tags">
               <span class="skills-tag">Python</span>
-              <span class="skills-tag">SQL</span>
-              <span class="skills-tag">Snowflake</span>
-              <span class="skills-tag">AWS</span>
-              <span class="skills-tag">Databricks</span>
-            </div>
-          </div>
-
-          <div class="skills-card">
-            <h3>Machine Learning & Analytics</h3>
-            <div class="skills-tags">
-              <span class="skills-tag">Machine Learning</span>
               <span class="skills-tag">Pandas</span>
-              <span class="skills-tag">Scikit-learn</span>
               <span class="skills-tag">NumPy</span>
-              <span class="skills-tag">Statistics</span>
-              <span class="skills-tag">R</span>
+              <span class="skills-tag">Scikit-learn</span>
+              <span class="skills-tag">Matplotlib</span>
+              <span class="skills-tag">SQL</span>
+              <span class="skills-tag">Jupyter</span>
+              <span class="skills-tag">Git</span>
+              <span class="skills-tag">R (basic)</span>
             </div>
           </div>
 
           <div class="skills-card">
-            <h3>Tools & Workflow</h3>
+            <h3>Cloud & Data Engineering</h3>
+            <p>Designing and maintaining scalable data pipelines.</p>
             <div class="skills-tags">
-              <span class="skills-tag">Git</span>
-              <span class="skills-tag">GitHub</span>
-              <span class="skills-tag">Jupyter</span>
+              <span class="skills-tag">AWS S3</span>
+              <span class="skills-tag">AWS Lambda</span>
+              <span class="skills-tag">AWS EMR</span>
+              <span class="skills-tag">AWS Redshift</span>
+              <span class="skills-tag">Snowflake</span>
+              <span class="skills-tag">ETL / ELT</span>
+              <span class="skills-tag">Data Pipelines</span>
+              <span class="skills-tag">Data Wrangling</span>
+              <span class="skills-tag">Data Cleaning</span>
+            </div>
+          </div>
+
+          <div class="skills-card">
+            <h3>Visualisation & Storytelling</h3>
+            <p>Helping stakeholders understand what the data is saying.</p>
+            <div class="skills-tags">
               <span class="skills-tag">Power BI</span>
-              <span class="skills-tag">Reproducible Notebooks</span>
+              <span class="skills-tag">Tableau</span>
+              <span class="skills-tag">Data Narratives</span>
+              <span class="skills-tag">Communication for Non-technical Stakeholders</span>
+            </div>
+          </div>
+
+          <div class="skills-card">
+            <h3>Soft Skills</h3>
+            <p>How I like to work with teams and stakeholders.</p>
+            <div class="skills-tags">
+              <span class="skills-tag">Analytical Thinking</span>
+              <span class="skills-tag">Structured Problem-Solving</span>
+              <span class="skills-tag">Collaboration</span>
+              <span class="skills-tag">Consulting-style Communication</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
+    <!-- HACKERRANK -->
+    <section id="hackerrank" class="section">
       <div class="container">
         <div class="section-header">
-          <div>
-            <h2 class="section-title">Contact</h2>
+          <div class="section-title-block">
+            <h2 class="section-title">HackerRank</h2>
             <p class="section-subtitle">
-              If you’d like to talk about data engineering, machine learning, cloud
-              analytics or potential opportunities, feel free to reach out.
+              I use platforms like HackerRank to keep my problem-solving and coding
+              skills sharp, particularly in Python and SQL.
             </p>
           </div>
-          <div class="badge">Open to roles & collaborations</div>
+          <div class="section-tag">Continuous Practice</div>
+        </div>
+
+        <div class="hr-card">
+          <div class="hr-row">
+            <div>
+              <div class="hr-badge">
+                <span class="icon"></span>
+                <span>HackerRank Profile</span>
+              </div>
+              <p>
+                You can explore some of my practice progress and coding solutions on
+                my HackerRank profile.
+              </p>
+            </div>
+            <div class="hr-buttons">
+              <a
+                class="btn-outline"
+                href="https://www.hackerrank.com/profile/shinojphilipjohn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View HackerRank →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME VIEWER -->
+    <section id="resume" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-block">
+            <h2 class="section-title">Resume</h2>
+            <p class="section-subtitle">
+              A concise view of my background in data engineering, analytics and
+              machine learning.
+            </p>
+          </div>
+          <div class="section-tag">PDF Viewer + Download</div>
+        </div>
+
+        <div class="resume-card">
+          <p>
+            You can preview my latest CV directly on this page, or download a copy
+            to review later.
+          </p>
+
+          <div class="resume-actions">
+            <a class="btn-primary" href="Shinoj_Philip_John_CV.pdf" target="_blank" rel="noreferrer">
+              Open CV in new tab
+            </a>
+            <a class="btn-secondary" href="Shinoj_Philip_John_CV.pdf" download>
+              Download CV (PDF)
+            </a>
+          </div>
+
+          <div class="resume-frame-wrapper">
+            <!-- Make sure Shinoj_Philip_John_CV.pdf is uploaded to the repo root -->
+            <iframe
+              class="resume-frame"
+              src="Shinoj_Philip_John_CV.pdf"
+              title="Resume - Shinoj Philip John"
+            ></iframe>
+          </div>
+          <div class="resume-note">
+            If the viewer does not load, you can open the PDF in a new tab using the button above.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-block">
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">
+              If you’d like to discuss data engineering, machine learning, cloud
+              analytics, or potential opportunities, feel free to reach out.
+            </p>
+          </div>
+          <div class="section-tag">Happy to connect</div>
         </div>
 
         <div class="contact-card">
           <p>
-            The best way to reach me is via email or LinkedIn. I’m happy to share
-            more details about my projects, walk through my approach, or discuss how
-            I can contribute to your team.
+            I’m open to roles in data engineering, analytics and ML-focused
+            positions, as well as conversations about interesting data projects or
+            collaborations.
           </p>
-
           <div class="contact-row">
             <div class="contact-item">
               <span class="contact-label">Email</span>
@@ -1182,19 +1561,31 @@
                 shinoj4005@gmail.com
               </a>
             </div>
-
             <div class="contact-item">
               <span class="contact-label">LinkedIn</span>
-              <a class="contact-link" href="https://linkedin.com/in/shinoj-philip-john" target="_blank">
+              <a
+                class="contact-link"
+                href="https://linkedin.com/in/shinoj-philip-john"
+                target="_blank"
+                rel="noreferrer"
+              >
                 linkedin.com/in/shinoj-philip-john
               </a>
             </div>
-
             <div class="contact-item">
               <span class="contact-label">GitHub</span>
-              <a class="contact-link" href="https://github.com/shinojphilipjohn" target="_blank">
+              <a
+                class="contact-link"
+                href="https://github.com/shinojphilipjohn"
+                target="_blank"
+                rel="noreferrer"
+              >
                 github.com/shinojphilipjohn
               </a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Portfolio URL</span>
+              <span class="contact-link">shinojphilipjohn.github.io</span>
             </div>
           </div>
         </div>
@@ -1205,11 +1596,11 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div>© <span id="year"></span> · Built & maintained by Shinoj Philip John.</div>
+      <div>© <span id="year"></span> · Built by Shinoj Philip John.</div>
       <div class="footer-links">
         <a href="#top">Back to top ↑</a>
-        <a href="https://github.com/shinojphilipjohn" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/shinoj-philip-john" target="_blank">LinkedIn</a>
+        <a href="https://github.com/shinojphilipjohn" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/shinoj-philip-john" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </div>
   </footer>
@@ -1218,18 +1609,19 @@
     // Mobile nav toggle
     const navToggle = document.getElementById("navToggle");
     const navLinks = document.getElementById("navLinks");
+
     navToggle.addEventListener("click", () => {
       navLinks.classList.toggle("show");
     });
 
-    // Close nav on click (mobile)
+    // Close on nav link click (mobile)
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         navLinks.classList.remove("show");
       });
     });
 
-    // Dynamic year
+    // Dynamic year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
