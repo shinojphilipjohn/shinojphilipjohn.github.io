@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Shinoj Philip John</title>
+  <meta name="description" content="Projects — Customer churn prediction and payroll ETL framework." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-dot"></span><span>Shinoj Philip John</span></a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="" href="about.html">About</a>
+        <a class="" href="experience.html">Experience</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a class="" href="skills.html">Skills</a>
+        <a class="" href="dashboards.html">Dashboards</a>
+        <a class="" href="hackerrank.html">HackerRank</a>
+        <a href="certifications.html">Certifications</a>
+        
+        <a class="" href="resume.html">Resume</a>
+        <a class="" href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme"><span aria-hidden="true">◐</span></button>
+    </div>
+  </header>
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p class="lead muted">Selected projects showing how I approach problems from exploration and modelling through to pipeline design and automation.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <article class="card wide">
+        <div class="card-top"><h2 class="h3">Customer Churn Prediction</h2><span class="pill">In progress</span></div>
+        <p class="muted">
+          Built an end-to-end churn modelling workflow to help subscription-style businesses understand and predict which customers are likely to leave, using a Telco-style dataset.
+        </p>
+        <ul class="list">
+          <li>Cleaned and preprocessed 7,000+ customer records, handling missing values, encoding categorical fields and scaling numerical features.</li>
+          <li>Performed EDA to uncover relationships between tenure, contract types, billing patterns and churn behaviour.</li>
+          <li>Improved model performance from a baseline of ~70% to ~82% through feature engineering, tuning and cross-validation, with a focus on business-relevant metrics.</li>
+        </ul>
+        <div class="meta">
+          <div><strong>Tech:</strong> Python • Pandas • scikit-learn</div>
+          <div><strong>GitHub:</strong> <a href="https://github.com/shinojphilipjohn/Churn-Prediction" target="_blank" rel="noopener">https://github.com/shinojphilipjohn/Churn-Prediction</a></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/shinojphilipjohn/Churn-Prediction" target="_blank" rel="noopener">View on GitHub →</a>
+          <a class="btn ghost" href="skills.html">Related Skills</a>
+        </div>
+      </article>
+
+      <article class="card wide" style="margin-top:16px;">
+        <div class="card-top"><h2 class="h3">End-to-End Payroll ETL Framework</h2><span class="pill">Python • CLI</span></div>
+        <p class="muted">
+          Designed a command-line–driven ETL engine to automate payroll data workflows, integrating CSV and SQL sources into a single, reproducible pipeline.
+        </p>
+        <ul class="list">
+          <li>Implemented a structured flow covering extract → DDL creation → transform → load, reducing manual preparation time from hours to minutes.</li>
+          <li>Built repeatable, auditable runs with a scripted pipeline design (configurable and reproducible).</li>
+        </ul>
+        <div class="meta">
+          <div><strong>Tech:</strong> Python • Pandas • MySQL • ETL Automation</div>
+          <div><strong>GitHub:</strong> <a href="https://github.com/shinojphilipjohn/ETL-Processor" target="_blank" rel="noopener">https://github.com/shinojphilipjohn/ETL-Processor</a></div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/shinojphilipjohn/ETL-Processor" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+      </article>
+
+      <article class="card wide" style="margin-top:16px;">
+        <h2 class="h3">How I approach projects</h2>
+        <ul class="list">
+          <li>Start from a clear business question and success metric.</li>
+          <li>Use targeted EDA to shape the data model and feature set, not just generate charts.</li>
+          <li>Keep clean, modular notebooks or scripts with clear stages.</li>
+          <li>Focus on evaluation that reflects business impact, not just a single score.</li>
+          <li>Document assumptions, limitations and next steps for future iterations or deployment.</li>
+        </ul>
+      </article>
+    
+      <article class="card wide" style="margin-top:16px;">
+        <div class="card-top"><h2 class="h3">Tableau Dashboards</h2><span class="pill">BI • Storytelling</span></div>
+        <p class="muted">
+          I build interactive Tableau dashboards that combine clear KPIs, drill-down exploration, and a short “so what” insight layer.
+          Recent work includes a Victoria Road Crash analytics dashboard (real government open data) and a Global Graduate Employability dashboard (synthetic dataset for demonstration).
+        </p>
+        <div class="actions">
+          <a class="btn" href="dashboards.html">Open Dashboards →</a>
+        </div>
+      </article>
+    
+    </div>
+  </section>
+</main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="muted">© <span id="year"></span> Shinoj Philip John</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="dashboards.html">Dashboards</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
