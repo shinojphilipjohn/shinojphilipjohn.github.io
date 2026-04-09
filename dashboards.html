@@ -20,7 +20,6 @@
         <a class="active" href="dashboards.html">Dashboards</a>
         <a class="" href="hackerrank.html">HackerRank</a>
         <a href="certifications.html">Certifications</a>
-        
         <a class="" href="resume.html">Resume</a>
         <a class="" href="contact.html">Contact</a>
       </nav>
@@ -28,118 +27,176 @@
     </div>
   </header>
 
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <h1>Dashboards</h1>
-      <p class="lead muted">Interactive Tableau dashboards</p>
-    </div>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Dashboards</h1>
+        <p class="lead muted">Interactive Tableau dashboards</p>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="container">
+    <section class="section">
+      <div class="container">
 
-      <article class="card wide">
-        <div class="card-top">
-          <h2 class="h3">Victoria Road Crash Analytics</h2>
-          <span class="pill">Tableau • Real data</span>
-        </div>
-        <p class="muted">Accident trends, severity, hotspots, time patterns, causes and insights across Victoria.</p>
-        <div class="meta">
-          <div><strong>Dataset:</strong> <a href="https://opendata.transport.vic.gov.au/dataset/victoria-road-crash-data" target="_blank" rel="noopener">Vic Open Data – Road Crash Data</a></div>
-          <div><strong>Tableau:</strong> <a href="https://public.tableau.com/app/profile/shinoj.philip.john/viz/VictoriaAccidentsGuide/VicCrashDataDashboard" target="_blank" rel="noopener">View on Tableau Public</a></div>
-        </div>
+        <div class="dashboard-tabs-wrap">
+          <div class="dashboard-tabs-label">Featured dashboards</div>
 
-        <div class="tableau-embed">
-          <div class="tableauPlaceholder" id="viz1770595918434" style="position: relative"; width:100%; overflow-x:hidden>
-            <noscript><a href="#"><img alt="Victoria Accidents: How deadly are our roads?" src="https://public.tableau.com/static/images/Vi/VictoriaAccidentsGuide/VicCrashDataDashboard/1_rss.png" style="border:none;" /></a></noscript>
-            <object class="tableauViz" style="display:none;">
-              <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-              <param name="embed_code_version" value="3" />
-              <param name="site_root" value="" />
-              <param name="name" value="VictoriaAccidentsGuide/VicCrashDataDashboard" />
-              <param name="tabs" value="no" />
-              <param name="toolbar" value="yes" />
-              <param name="static_image" value="https://public.tableau.com/static/images/Vi/VictoriaAccidentsGuide/VicCrashDataDashboard/1.png" />
-              <param name="animate_transition" value="yes" />
-              <param name="display_static_image" value="yes" />
-              <param name="display_spinner" value="yes" />
-              <param name="display_overlay" value="yes" />
-              <param name="display_count" value="yes" />
-              <param name="language" value="en-GB" />
-            </object>
+          <div class="dashboard-tabs" role="tablist" aria-label="Dashboard tabs">
+            <button class="dashboard-tab active" data-tab="tour" role="tab" aria-selected="true" aria-controls="panel-tour" id="tab-tour">
+              <span class="dashboard-tab-kicker">Analytics</span>
+              <span class="dashboard-tab-title">Tour De France</span>
+            </button>
+
+            <button class="dashboard-tab" data-tab="vic" role="tab" aria-selected="false" aria-controls="panel-vic" id="tab-vic">
+              <span class="dashboard-tab-kicker">Transport</span>
+              <span class="dashboard-tab-title">Victoria Road Crash Analytics</span>
+            </button>
+
+            <button class="dashboard-tab" data-tab="grad" role="tab" aria-selected="false" aria-controls="panel-grad" id="tab-grad">
+              <span class="dashboard-tab-kicker">Education</span>
+              <span class="dashboard-tab-title">Global Graduate Employability</span>
+            </button>
           </div>
-          <script type="text/javascript">
-            var divElement = document.getElementById("viz1770595918434");
-            var vizElement = divElement.getElementsByTagName("object")[0];
-            vizElement.style.width = "100%";
-            vizElement.style.height = "950px";
-            var scriptElement = document.createElement("script");
-            scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-          </script>
-        </div>
-      </article>
-
-      <article class="card wide" style="margin-top:16px;">
-        <div class="card-top">
-          <h2 class="h3">Global Graduate Employability</h2>
-          <span class="pill">Tableau • Synthetic data</span>
-        </div>
-        <p class="muted">
-          Comparative dashboard exploring salary trends, employment rates, and skills demand.
-          <strong>Dataset is synthetic</strong> (used for demonstration).
-        </p>
-        <div class="meta">
-          <div><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/zulqarnain11/global-graduate-skills-and-employability-index" target="_blank" rel="noopener">Kaggle – Global Graduate Skills & Employability Index (Synthetic)</a></div>
-          <div><strong>Tableau:</strong> <a href="https://public.tableau.com/app/profile/shinoj.philip.john/viz/GlobalGraduateEmployability/GlobalGraduateEmployability" target="_blank" rel="noopener">View on Tableau Public</a></div>
         </div>
 
-        <div class="note" style="margin-top:14px;">
-          
-        <div class="tableau-embed" style="margin-top:16px;">
-          <div class="tableauPlaceholder" id="viz_grad_employability" style="position: relative;">
-            <noscript>
-              <a href="#">
-                <img alt="Global Graduate Employability"
-                     src="https://public.tableau.com/static/images/Gl/GlobalGraduateEmployability/GlobalGraduateEmployability/1_rss.png"
-                     style="border:none;" />
-              </a>
-            </noscript>
-            <object class="tableauViz" style="display:none;">
-              <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-              <param name="embed_code_version" value="3" />
-              <param name="site_root" value="" />
-              <param name="name" value="GlobalGraduateEmployability/GlobalGraduateEmployability" />
-              <param name="tabs" value="no" />
-              <param name="toolbar" value="yes" />
-              <param name="static_image" value="https://public.tableau.com/static/images/Gl/GlobalGraduateEmployability/GlobalGraduateEmployability/1.png" />
-              <param name="animate_transition" value="yes" />
-              <param name="display_static_image" value="yes" />
-              <param name="display_spinner" value="yes" />
-              <param name="display_overlay" value="yes" />
-              <param name="display_count" value="yes" />
-              <param name="language" value="en-GB" />
-            </object>
+        <div class="dashboard-panels">
+
+          <div class="dashboard-panel active" id="panel-tour" role="tabpanel" aria-labelledby="tab-tour">
+            <article class="card wide">
+              <div class="card-top">
+                <h2 class="h3">Tour De France</h2>
+                <span class="pill">Tableau • Real data</span>
+              </div>
+              <p class="muted">
+                Comprehensive Tour de France analytics covering riders, stages, jerseys, intensity distribution, and historical trends.
+              </p>
+              <div class="meta">
+                <div><strong>Tableau:</strong> <a href="https://public.tableau.com/views/TourDeFrance_17742212896090/TourDeFrance" target="_blank" rel="noopener">View on Tableau Public</a></div>
+              </div>
+
+              <div class="tableau-embed">
+                <div class="tableauPlaceholder" id="viz_tour_de_france" style="position: relative; width:100%; overflow-x:hidden;">
+                  <noscript>
+                    <a href="#">
+                      <img alt="Tour De France"
+                           src="https://public.tableau.com/static/images/To/TourDeFrance_17742212896090/TourDeFrance/1_rss.png"
+                           style="border:none;" />
+                    </a>
+                  </noscript>
+                  <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="TourDeFrance_17742212896090/TourDeFrance" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image" value="https://public.tableau.com/static/images/To/TourDeFrance_17742212896090/TourDeFrance/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-GB" />
+                  </object>
+                </div>
+              </div>
+            </article>
           </div>
-          <script type="text/javascript">
-            var divElementG = document.getElementById("viz_grad_employability");
-            var vizElementG = divElementG.getElementsByTagName("object")[0];
-            vizElementG.style.width = "100%";
-            vizElementG.style.height = "850px";
-            var scriptElementG = document.createElement("script");
-            scriptElementG.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
-            vizElementG.parentNode.insertBefore(scriptElementG, vizElementG);
-          </script>
-        </div>
-        
-        Want to see all dashboards? <a href="https://public.tableau.com/app/profile/shinoj.philip.john/vizzes" target="_blank" rel="noopener">Open my Tableau Public profile</a>.
-        </div>
-      </article>
 
-    </div>
-  </section>
-</main>
+          <div class="dashboard-panel" id="panel-vic" role="tabpanel" aria-labelledby="tab-vic" hidden>
+            <article class="card wide">
+              <div class="card-top">
+                <h2 class="h3">Victoria Road Crash Analytics</h2>
+                <span class="pill">Tableau • Real data</span>
+              </div>
+              <p class="muted">Accident trends, severity, hotspots, time patterns, causes and insights across Victoria.</p>
+              <div class="meta">
+                <div><strong>Dataset:</strong> <a href="https://opendata.transport.vic.gov.au/dataset/victoria-road-crash-data" target="_blank" rel="noopener">Vic Open Data – Road Crash Data</a></div>
+                <div><strong>Tableau:</strong> <a href="https://public.tableau.com/app/profile/shinoj.philip.john/viz/VictoriaAccidentsGuide/VicCrashDataDashboard" target="_blank" rel="noopener">View on Tableau Public</a></div>
+              </div>
+
+              <div class="tableau-embed">
+                <div class="tableauPlaceholder" id="viz_vic_crash" style="position: relative; width:100%; overflow-x:hidden;">
+                  <noscript>
+                    <a href="#">
+                      <img alt="Victoria Accidents: How deadly are our roads?"
+                           src="https://public.tableau.com/static/images/Vi/VictoriaAccidentsGuide/VicCrashDataDashboard/1_rss.png"
+                           style="border:none;" />
+                    </a>
+                  </noscript>
+                  <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="VictoriaAccidentsGuide/VicCrashDataDashboard" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image" value="https://public.tableau.com/static/images/Vi/VictoriaAccidentsGuide/VicCrashDataDashboard/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-GB" />
+                  </object>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="dashboard-panel" id="panel-grad" role="tabpanel" aria-labelledby="tab-grad" hidden>
+            <article class="card wide">
+              <div class="card-top">
+                <h2 class="h3">Global Graduate Employability</h2>
+                <span class="pill">Tableau • Synthetic data</span>
+              </div>
+              <p class="muted">
+                Comparative dashboard exploring salary trends, employment rates, and skills demand.
+                <strong>Dataset is synthetic</strong> (used for demonstration).
+              </p>
+              <div class="meta">
+                <div><strong>Dataset:</strong> <a href="https://www.kaggle.com/datasets/zulqarnain11/global-graduate-skills-and-employability-index" target="_blank" rel="noopener">Kaggle – Global Graduate Skills & Employability Index (Synthetic)</a></div>
+                <div><strong>Tableau:</strong> <a href="https://public.tableau.com/app/profile/shinoj.philip.john/viz/GlobalGraduateEmployability/GlobalGraduateEmployability" target="_blank" rel="noopener">View on Tableau Public</a></div>
+              </div>
+
+              <div class="tableau-embed" style="margin-top:16px;">
+                <div class="tableauPlaceholder" id="viz_grad_employability" style="position: relative; width:100%; overflow-x:hidden;">
+                  <noscript>
+                    <a href="#">
+                      <img alt="Global Graduate Employability"
+                           src="https://public.tableau.com/static/images/Gl/GlobalGraduateEmployability/GlobalGraduateEmployability/1_rss.png"
+                           style="border:none;" />
+                    </a>
+                  </noscript>
+                  <object class="tableauViz" style="display:none;">
+                    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                    <param name="embed_code_version" value="3" />
+                    <param name="site_root" value="" />
+                    <param name="name" value="GlobalGraduateEmployability/GlobalGraduateEmployability" />
+                    <param name="tabs" value="no" />
+                    <param name="toolbar" value="yes" />
+                    <param name="static_image" value="https://public.tableau.com/static/images/Gl/GlobalGraduateEmployability/GlobalGraduateEmployability/1.png" />
+                    <param name="animate_transition" value="yes" />
+                    <param name="display_static_image" value="yes" />
+                    <param name="display_spinner" value="yes" />
+                    <param name="display_overlay" value="yes" />
+                    <param name="display_count" value="yes" />
+                    <param name="language" value="en-GB" />
+                  </object>
+                </div>
+              </div>
+
+              <div class="note" style="margin-top:14px;">
+                Want to see all dashboards? <a href="https://public.tableau.com/app/profile/shinoj.philip.john/vizzes" target="_blank" rel="noopener">Open my Tableau Public profile</a>.
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -155,6 +212,7 @@
       </div>
     </div>
   </footer>
+
   <script src="assets/js/script.js"></script>
 </body>
 </html>
