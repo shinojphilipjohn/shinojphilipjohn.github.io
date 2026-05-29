@@ -39,7 +39,26 @@
   <section class="section">
     <div class="container">
       <article class="card wide">
-        <div class="card-top"><h2 class="h3">Customer Churn Prediction</h2><span class="pill">In progress</span></div>
+        <div class="card-top"><h2 class="h3">End-to-End ELT Data Pipeline — Azure Cloud</h2><span class="pill">Azure • dbt • Github Actions </span></div>
+        <p class="muted">
+          Built a production-grade ELT pipeline on Microsoft Azure, transforming the Olist Brazilian E-Commerce dataset (~100K orders, 9 relational tables) from raw CSV files into an analytics-ready Kimball star schema using the Medallion Architecture.
+        </p>
+        <ul class="list">
+          <li>Ingested 9 CSV files (125MB) from Azure Blob Storage into Azure SQL Database via two methods — a Python script using SQLAlchemy with Microsoft Entra DefaultAzureCredential (zero hardcoded credentials), and an Azure Data Factory pipeline with ForEach, Filter, and Copy Data activities using Managed Identity authentication.</li>
+          <li>Transformed raw data through a Medallion Architecture (Bronze → Silver → Gold) using dbt Core with dbt-sqlserver adapter — staging models for cleaning and casting, mart models implementing Kimball dimensional modelling with incremental materialisation and upsert logic via MERGE statements.</li>
+          <li>Implemented 46 automated dbt tests (unique, not_null, relationships, composite key validation via dbt_utils) with GitHub Actions CI/CD running dbt run and dbt test on every push, pull request, and manual trigger — branch protection rules enforce only tested code reaches production.</li>
+        </ul>
+        <div class="meta">
+          <div><strong>Tech:</strong> Azure Blob Storage • Azure SQL Database (Serverless) • Azure Data Factory • Python • SQLAlchemy • pandas • dbt Core • dbt-sqlserver • dbt_utils • GitHub Actions • Microsoft Entra ID</div>
+        </div>
+        <div class="actions">
+          <a class="btn github" href="https://github.com/shinojphilipjohn/DBT_AZURE_TABLEAU_ELT" target="_blank" rel="noopener">View on GitHub →</a>
+          <a class="btn primary" href="architecture_diagram_final.html" target="_blank" rel="noopener">View Pipeline Architecture →</a>
+          <a class="btn ghost" href="skills.html">Related Skills</a>
+        </div>
+      </article>
+      <article class="card wide">
+        <div class="card-top"><h2 class="h3">Customer Churn Prediction</h2><span class="pill">ML •  Python</span></div>
         <p class="muted">
           Built an end-to-end churn modelling workflow to help subscription-style businesses understand and predict which customers are likely to leave, using a Telco-style dataset.
         </p>
@@ -50,10 +69,9 @@
         </ul>
         <div class="meta">
           <div><strong>Tech:</strong> Python • Pandas • scikit-learn</div>
-          <div><strong>GitHub:</strong> <a href="https://github.com/shinojphilipjohn/Churn-Prediction" target="_blank" rel="noopener">https://github.com/shinojphilipjohn/Churn-Prediction</a></div>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/shinojphilipjohn/Churn-Prediction" target="_blank" rel="noopener">View on GitHub →</a>
+          <a class="btn github" href="https://github.com/shinojphilipjohn/Churn-Prediction" target="_blank" rel="noopener">View on GitHub →</a>
           <a class="btn ghost" href="skills.html">Related Skills</a>
         </div>
       </article>
@@ -69,24 +87,13 @@
         </ul>
         <div class="meta">
           <div><strong>Tech:</strong> Python • Pandas • MySQL • ETL Automation</div>
-          <div><strong>GitHub:</strong> <a href="https://github.com/shinojphilipjohn/ETL-Processor" target="_blank" rel="noopener">https://github.com/shinojphilipjohn/ETL-Processor</a></div>
         </div>
         <div class="actions">
-          <a class="btn" href="https://github.com/shinojphilipjohn/ETL-Processor" target="_blank" rel="noopener">View on GitHub →</a>
-          </div>
+          <a class="btn github" href="https://github.com/shinojphilipjohn/ETL-Processor" target="_blank" rel="noopener">View on GitHub →</a>
+          <a class="btn ghost" href="skills.html">Related Skills</a>  
+        </div>
       </article>
-
-      <article class="card wide" style="margin-top:16px;">
-        <h2 class="h3">How I approach projects</h2>
-        <ul class="list">
-          <li>Start from a clear business question and success metric.</li>
-          <li>Use targeted EDA to shape the data model and feature set, not just generate charts.</li>
-          <li>Keep clean, modular notebooks or scripts with clear stages.</li>
-          <li>Focus on evaluation that reflects business impact, not just a single score.</li>
-          <li>Document assumptions, limitations and next steps for future iterations or deployment.</li>
-        </ul>
-      </article>
-    
+      
       <article class="card wide" style="margin-top:16px;">
         <div class="card-top"><h2 class="h3">Tableau Dashboards</h2><span class="pill">BI • Storytelling</span></div>
         <p class="muted">
@@ -94,9 +101,25 @@
           Recent work includes a Tour De France dashboard (real data), Victoria Road Crash analytics dashboard (real government open data) and a Global Graduate Employability dashboard (synthetic dataset for demonstration).
         </p>
         <div class="actions">
-          <a class="btn" href="dashboards.html">Open Dashboards →</a>
+          <a class="btn dashboard" href="dashboards.html">Open Dashboards →</a>
         </div>
       </article>
+
+      <article class="card wide" style="margin-top:16px;">
+        <h2 class="h3">How I approach projects</h2>
+        <ul class="list">
+          <li>Start from a clear business question — for data pipelines, identify the grain, entities, and measures before writing code; for ML models, define the prediction target and success metric before touching the data.</li>
+          <li>Use targeted EDA to shape decisions — not just to generate charts, but to understand data quality issues, feature relationships, and what the model or pipeline actually needs to handle.</li>
+          <li>Design for the full stack from day one — raw ingestion, transformation layers, data quality tests, and CI/CD for pipelines; preprocessing, feature engineering, cross-validation, and business-relevant evaluation metrics for ML.</li>
+          <li>Preserve source data as an immutable truth layer and own all transformation logic in version-controlled code — not in ad-hoc scripts or database procedures.</li>
+          <li>Enforce quality automatically — schema tests and referential integrity for data pipelines; confusion matrices, precision/recall tradeoffs, and cross-validation for ML models — evaluated against what matters to the business, not just a single accuracy score.</li>
+          <li>Make deliberate architectural tradeoffs and choose the right tool for each layer — document the reasoning so the next engineer understands why decisions were made, not just what was built.</li>
+          <li>Treat security as a first-class concern — zero hardcoded credentials, Managed Identity where possible, and branch protection rules so only tested code reaches production.</li>
+          <li>Document assumptions, known limitations, and what would change at scale — for future iterations, deployment, or the next person picking up the work.</li>
+        </ul>
+      </article>
+    
+
     
     </div>
   </section>

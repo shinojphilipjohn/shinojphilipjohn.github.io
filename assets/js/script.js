@@ -78,3 +78,23 @@
 
   activateTab("tour");
 })();
+
+// Seamless logo scroll
+window.addEventListener('load', function () {
+  const track = document.querySelector('.logo-track');
+  if (!track) return;
+
+  const original = track.innerHTML;
+  track.innerHTML = original + original;
+
+  const totalWidth = track.scrollWidth;
+  const oneSetWidth = totalWidth / 2;
+
+  // 20px per second — increase number to slow down
+  const duration = oneSetWidth / 20;
+  track.style.animationDuration = duration + 's';
+
+  track.style.setProperty('--scroll-distance', `-${oneSetWidth}px`);
+
+  track.classList.add('ready');
+});

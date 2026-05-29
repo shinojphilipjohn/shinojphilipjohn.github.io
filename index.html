@@ -3,9 +3,68 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shinoj Philip John | Data Engineer & ML Enthusiast</title>
+  <title>Shinoj Philip John | Data Engineer & Analyst</title>
   <meta name="description" content="Portfolio: Data Engineering, Machine Learning, Cloud Analytics, Tableau dashboards, and projects." />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ── SCROLLING LOGO STRIP ── */
+    .clients {
+      padding: 48px 0 40px;
+      overflow: hidden;
+    }
+    .clients-label {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: .7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--muted, #7a8fa0);
+    }
+    .logo-track-wrapper {
+      overflow: hidden;
+      width: 100%;
+      -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    }
+    .logo-track {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      width: max-content;
+      animation: scroll-logos 22s linear infinite;
+    }
+    .logo-track:hover {
+      animation-play-state: paused;
+    }
+    .logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .logo-item img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.55;
+      transition: filter 0.3s, opacity 0.3s;
+    }
+    .logo-item:hover img {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+    .logo-item .logo-via {
+      font-size: .58rem;
+      color: var(--muted, #7a8fa0);
+      letter-spacing: .5px;
+    }
+    @keyframes scroll-logos {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
 </head>
 <body>
 
@@ -20,7 +79,6 @@
         <a class="" href="dashboards.html">Dashboards</a>
         <a class="" href="hackerrank.html">HackerRank</a>
         <a href="certifications.html">Certifications</a>
-        
         <a class="" href="resume.html">Resume</a>
         <a class="" href="contact.html">Contact</a>
       </nav>
@@ -39,13 +97,12 @@
       <h1>Hi, I'm Shinoj Philip John.</h1>
 
       <p class="lead muted">
-        Data Engineer & Machine Learning Enthusiast with experience designing cloud-based data pipelines,
-        building predictive models, and turning raw data into actionable insights for decision-makers.
+        Data Engineer and Analyst with hands-on experience designing and building production-grade cloud data pipelines on Microsoft Azure, implementing dimensional data models with dbt Core, developing machine learning models for business prediction problems, and delivering analytics and visualisations in Tableau and Power BI. Focused on building reliable, tested, and cost-efficient data systems that turn raw data into trusted insights.
       </p>
 
       <div class="cta-row">
         <a class="btn primary" href="projects.html">View Projects</a>
-        <a class="btn" href="dashboards.html">View Dashboards</a>
+        <a class="btn dashboard" href="dashboards.html">View Dashboards</a>
         <a class="btn ghost" href="resume.html">View Resume</a>
       </div>
 
@@ -66,19 +123,19 @@
           alt="Shinoj Philip John"
           style="width:140px; height:140px; object-fit:cover; border-radius:18px; border:1px solid var(--border);"
         />
-
         <div style="flex:1; min-width:220px;">
           <div style="font-weight:800; font-size:18px;">Shinoj Philip John</div>
-          <div class="muted" style="margin-top:6px;">Data Engineer • ML • BI</div>
-
+          <div class="muted" style="margin-top:6px;">Data Engineer • ML • Analytics</div>
           <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
             <span class="pill">Python</span>
             <span class="pill">SQL</span>
-            <span class="pill">AWS</span>
             <span class="pill">Azure</span>
+            <span class="pill">AWS</span>
             <span class="pill">Snowflake</span>
-            <span class="pill">Databricks</span>
+            <span class="pill">dbt</span>
             <span class="pill">Tableau</span>
+            <span class="pill">Databricks</span>
+            <span class="pill">GitHub Actions</span>
           </div>
         </div>
       </div>
@@ -87,16 +144,16 @@
 
       <div class="stat-grid">
         <div class="stat">
-          <div class="stat-label">Strength</div>
-          <div class="stat-value">Pipelines · ML</div>
+          <div class="stat-label">Pipelines</div>
+          <div class="stat-value">Azure · AWS · dbt</div>
         </div>
         <div class="stat">
-          <div class="stat-label">Strength</div>
-          <div class="stat-value">Analytics</div>
+          <div class="stat-label">ML</div>
+          <div class="stat-value">scikit-learn</div>
         </div>
         <div class="stat">
-          <div class="stat-label">Cloud</div>
-          <div class="stat-value">AWS · Azure</div>
+        <div class="stat-label">Experience</div>
+        <div class="stat-value">3+ Years</div>
         </div>
         <div class="stat">
           <div class="stat-label">BI</div>
@@ -106,37 +163,99 @@
     </div>
 
   </div>
-<section class="section">
+  </section>
+
+  <!-- ── SCROLLING COMPANY LOGOS ── -->
   <div class="container">
-
-    <div class="section-head">
-      <h2>Work Experience</h2>
+    <div class="clients">
+      <p class="clients-label">Companies I've worked with</p>
+      <div class="logo-track-wrapper">
+        <div class="logo-track">
+        <!-- Set 1 -->
+        <div class="logo-item">
+          <img src="assets/logos/nbn.png" alt="NBN Co"/>
+          <span class="logo-via">via Infosys</span>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/infosys.png" alt="Infosys"/>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/ibisworld.png" alt="IBISWorld"/>
+        </div>
+        <!-- Set 2 -->
+        <div class="logo-item">
+          <img src="assets/logos/nbn.png" alt="NBN Co"/>
+          <span class="logo-via">via Infosys</span>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/infosys.png" alt="Infosys"/>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/ibisworld.png" alt="IBISWorld"/>
+        </div>
+        <!-- Set 3 -->
+        <div class="logo-item">
+          <img src="assets/logos/nbn.png" alt="NBN Co"/>
+          <span class="logo-via">via Infosys</span>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/infosys.png" alt="Infosys"/>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/ibisworld.png" alt="IBISWorld"/>
+        </div>
+        <!-- Set 4 -->
+        <div class="logo-item">
+          <img src="assets/logos/nbn.png" alt="NBN Co"/>
+          <span class="logo-via">via Infosys</span>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/infosys.png" alt="Infosys"/>
+        </div>
+        <div class="logo-item">
+          <img src="assets/logos/ibisworld.png" alt="IBISWorld"/>
+        </div>
+      </div>
+      </div>
     </div>
-
-    <p class="muted" style="margin-top:-6px; margin-bottom:24px;">
-      Companies I’ve worked with.
-    </p>
-
-    <!-- nbn -->
-    <h3 style="margin-bottom:10px;">nbn Australia (via Infosys)</h3>
-    <div class="chip-grid" style="margin-bottom:24px;">
-      <span class="chip">Data Engineering</span>
-      <span class="chip">AWS Pipelines</span>
-      <span class="chip">Redshift</span>
-      <span class="chip">ETL Optimization</span>
-    </div>
-
-    <!-- IBISWorld -->
-    <h3 style="margin-bottom:10px;">IBISWorld</h3>
-    <div class="chip-grid">
-      <span class="chip">Snowflake ELT</span>
-      <span class="chip">JSON Processing</span>
-      <span class="chip">Data Modelling</span>
-      <span class="chip">Pipeline Documentation</span>
-    </div>
-
   </div>
-</section>
+
+  <!-- ── WORK EXPERIENCE ── -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <h2>Work Experience</h2>
+      </div>
+
+      <p class="muted" style="margin-top:-6px; margin-bottom:24px;">
+        Companies I've worked with.
+      </p>
+
+      <!-- nbn -->
+      <h3 style="margin-bottom:10px;">nbn Australia - Infosys</h3>
+      <div class="chip-grid" style="margin-bottom:24px;">
+        <span class="chip">Data Engineering</span>
+        <span class="chip">AWS Pipelines</span>
+        <span class="chip">Redshift</span>
+        <span class="chip">Github</span>
+        <span class="chip">Jenkins</span>
+        <span class="chip">Jira</span>
+        <span class="chip">ETL Optimization</span>
+      </div>
+
+      <!-- IBISWorld -->
+      <h3 style="margin-bottom:10px;">IBISWorld</h3>
+      <div class="chip-grid">
+        <span class="chip">Snowflake ELT</span>
+        <span class="chip">JSON Processing</span>
+        <span class="chip">Data Modelling</span>
+        <span class="chip">Pipeline Documentation</span>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
   <footer class="footer">
